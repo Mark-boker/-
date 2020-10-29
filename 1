@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+cout<<"欢迎使用学生成绩管理系统1.1 "<<"\n"<<"王小明   计算机2003班 2020.10.29"<<"\n"<<"输入4个同学的代号和成绩"<<endl;
+char A,B,C,D;
+int a,b,c,d;
+cin>>A>>B>>C>>D>>a>>b>>c>>d;
+
+   cout<<"1.显示4个同学的代号和成绩列表\n2.求4人平均分\n3.求4人总分\n4.查询某同学的分数\n5.统计及格率\n退出\n请输入(1-5)选择:"<<endl;
+   char n,g;
+   cin>>n;
+   int x,l,h=0;
+   float k;
+   x=(a+b+c+d)/4;
+   l=a+b+c+d;
+   switch(n)
+   {
+   	case'1': cout<<A<<" "<<a<<'\n'<<B<<" "<<b<<'\n'<<C<<" "<<c<<'\n'<<D<<" "<<d<<endl;  break;
+   	case'2': cout<<x<<endl;  break;
+   	case'3': cout<<l<<endl;  break;
+   	case'4': {cin>>g;
+	   switch(g)
+	   {case'A':cout<<a<<endl;  break;
+	   case'B':cout<<b<<endl;  break;
+	   case'C':cout<<c<<endl;  break;
+	   case'D':cout<<d<<endl;  break;
+	   }
+	     break;}
+   	case'5':{
+	   if(a>=60) ++h;
+	   if(b>=60) ++h;
+	   if(c>=60) ++h;
+	   if(d>=60) ++h;
+	   k=h*100/4;
+	   cout<<k<<"%"<<endl;
+	   };  break;
+   }
+   return 0;
+}
